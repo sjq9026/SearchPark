@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="hjx.com.searchpark.AllParksActivity">
+
+    <RelativeLayout
+        android:id="@+id/all_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/light_blue">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="15dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="附近车位"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/all_parks_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/all_title_layout"
+        android:divider="@color/light_blue"
+        android:dividerHeight="1dp">
+
+    </ListView>
+
+</RelativeLayout>

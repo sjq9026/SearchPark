@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/picture_iv"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/info_park_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="名称:"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/info_jl_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/info_park_name_tv"
+            android:gravity="center_vertical"
+            android:text="距离:"
+            android:textColor="@color/colorPrimary" />
+
+        <LinearLayout
+            android:id="@+id/info_num_layout"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/info_jl_tv"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/info_sum_num_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="总车位:"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/info_free_num_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:text="空车位:"
+                android:textColor="@color/colorAccent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/info_fenlei_layout"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/info_num_layout"
+
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/info_ccfl_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="车场分类:"
+                android:textColor="@color/colorPrimary" />
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

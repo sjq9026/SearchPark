@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shareInterpolator="false" >
+
+    <rotate
+        android:duration="2000"
+        android:fromDegrees="0"
+        android:interpolator="@android:anim/linear_interpolator"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:repeatCount="-1"
+        android:repeatMode="restart"
+        android:startOffset="-1"
+        android:toDegrees="+360" />
+
+</set> 
+<!-- duration   
+			控制动画执行一次的时间 -->
+<!-- fromDegrees  
+			旋转的开始角度。 (设置数值的话动画在某一段会跳过去) -->
+<!--
+ interpolator 详解
+ 		 AccelerateDecelerateInterpolator 在动画开始与结束的地方速率改变比较慢，在中间的时候加速
+ 		 AccelerateInterpolator  在动画开始的地方速率改变比较慢，然后开始加速
+ 		 AnticipateInterpolator 开始的时候向后然后向前甩
+ 		 AnticipateOvershootInterpolator 开始的时候向后然后向前甩一定值后返回最后的值
+ 		 BounceInterpolator   动画结束的时候弹起
+ 		 CycleInterpolator 动画循环播放特定的次数，速率改变沿着正弦曲线
+ 		 DecelerateInterpolator 在动画开始的地方快然后慢
+ 		 LinearInterpolator       以常量速率改变
+ 		 OvershootInterpolator    向前甩一定值后再回到原来位置
+-->
+<!-- pivotX  
+		表示缩放的中轴点X坐标，距离自身左边缘的位置
+		比如你想以图象的中心为中轴点，就是50% -->
+<!-- pivotY  
+		表示缩放的中轴点Y坐标，距离自身左边缘的位置
+		比如你想以图象的中心为中轴点，就是50% - -->
+<!-- repeatCount  
+		注意，是重复次数，除来原来要执行一次外，要重复执行几次。
+		原始执行一次，重复执行一次，总次数是2,重复次数是1. -->
+<!-- repeatMode  
+		重复的模式，默认为restart，即重头开始重新运行，可以为reverse即从结束开始向前重新运行。
+		在android:repeatCount大于0或为infinite时生效 -->
+<!-- startOffset  
+		设置动画执行之前等待时间； -->
+		
+<!-- fromDegrees   
+		开始的角度度数 -->
+<!-- toDegrees  
+		结束的角度度数，负数表示逆时针，正数表示顺时针。如10圈则比android:fromDegrees大3600即可 -->

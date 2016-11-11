@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="hjx.com.searchpark.ParkDetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/light_blue">
+
+        <ImageView
+            android:id="@+id/detail_back_btn"
+            android:layout_width="15dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/back_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="车位详情"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/detail_park_picture"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/title_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/detail_park_picture"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/picture_iv"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/detail_park_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:text="名称:"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/detail_adres_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detail_park_name_tv"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:text="地址:"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/detail_jl_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detail_adres_tv"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:text="距离:"
+            android:textColor="@color/colorPrimary" />
+
+
+        <LinearLayout
+            android:id="@+id/fenlei_layout"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/detail_jl_tv"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/detail_ccfl_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="车场分类:"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/cwxx_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="车位情况:"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/detail_yysj_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fenlei_layout"
+            android:layout_marginTop="10dp"
+            android:text="营业时间："
+            android:textColor="@color/colorPrimary" />
+
+        <LinearLayout
+            android:id="@+id/detail_num_layout"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/detail_yysj_tv"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/detail_sum_num_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="总车位:"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/detail_free_num_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="空车位:"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/detail_price_layout"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/detail_num_layout"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/detail_bt_price_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="白天价格:"
+                android:textColor="@color/colorPrimary" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/detail_ws_price_layout"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/detail_price_layout"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/detail_ws_price_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/detail_price_layout"
+                android:layout_weight="1"
+                android:text="晚上价格:"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/ljgh_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1px"
+            android:layout_weight="1"
+            android:background="@color/light_blue"
+            android:text="路径规划" />
+
+        <Button
+            android:id="@+id/dh_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1px"
+            android:layout_weight="1"
+            android:background="@color/light_blue"
+            android:text="导航" />
+
+    </LinearLayout>
+
+</RelativeLayout>
